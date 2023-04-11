@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: 1.5rem;
+    --head: calc(1rem + 5vw);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(black, transparent), url("./shardar-tarikul-islam-3UmTH5x2guQ-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 1.5rem;
+    color: white;
+    transform: translateY(-100%);
+    animation: movedown 1s ease-in-out 850ms forwards;
+}
+
+@keyframes movedown {
+    from {
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%); 
+    }
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+.hero-text {
+    color: white;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: slide 1s ease-in-out;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%); 
+    }
+}
+
+.hero-text a {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(232, 134, 23);
+    font-weight: 900;
+    font-size: var(--text);
+    padding: 0.8rem 1rem;
+    margin: 0.8rem auto;
+    border-radius: 9px;
+    display: block;
+    transition: 0.5s;
+}
+
+.hero-text a:hover {
+    background-color: rgb(207, 115, 10);
+}
+
+.hero-text h2 {
+    font-size: var(--head);
+}
+
+.hero-text p {
+    font-size: 3rem;
+}
